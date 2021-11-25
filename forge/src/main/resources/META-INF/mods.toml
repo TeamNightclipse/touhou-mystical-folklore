@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[@FORGE_LOADER_MAJOR@,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "touhou-mystical-folklore"
+version = "${version}"
+displayName = "touhou-mystical-folklore"
+authors = "Me!"
+description = '''
+fumo
+'''
+#logoFile = ""
+
+[[dependencies.touhou-mystical-folklore]]
+modId = "forge"
+mandatory = true
+versionRange = "[@FORGE_LOADER_MAJOR@,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.touhou-mystical-folklore]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[@MINECRAFT@,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.touhou-mystical-folklore]]
+modId = "architectury"
+mandatory = true
+versionRange = "[@ARCHITECTURY_API@,)"
+ordering = "AFTER"
+side = "BOTH"

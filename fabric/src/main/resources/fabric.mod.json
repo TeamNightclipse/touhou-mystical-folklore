@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "touhou-mystical-folklore",
+  "version": "${version}",
+  "name": "touhou-mystical-folklore",
+  "description": "fumo",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/touhou-mystical-folklore"
+  },
+  "license": "MIT",
+  "icon": "assets/touhou-mystical-folklore/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.cinnamon.tmf.fabric.ExampleModFabric"
+    ]
+  },
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.17.1",
+    "architectury": ">=2.6.35"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
