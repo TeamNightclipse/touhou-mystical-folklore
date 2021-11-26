@@ -1,15 +1,15 @@
 package com.cinnamon.tmf.forge;
 
 import dev.architectury.platform.forge.EventBuses;
-import com.cinnamon.tmf.ExampleMod;
+import com.cinnamon.tmf.TMF;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod(ExampleMod.MOD_ID)
-public class ExampleModForge {
-    public ExampleModForge() {
+@Mod(TMF.MOD_ID)
+public class TMFForge {
+    public TMFForge() {
         // Submit our event bus to let architectury register our content on the right time
-        EventBuses.registerModEventBus(ExampleMod.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
-        ExampleMod.init();
+        EventBuses.registerModEventBus(TMF.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
+        TMF.init();
     }
 }

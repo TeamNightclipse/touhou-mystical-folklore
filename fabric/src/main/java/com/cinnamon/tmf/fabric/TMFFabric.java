@@ -1,11 +1,11 @@
 package com.cinnamon.tmf.fabric;
 
-import com.cinnamon.tmf.ExampleMod;
+import com.cinnamon.tmf.TMF;
 import net.fabricmc.api.ModInitializer;
 
-public class ExampleModFabric implements ModInitializer {
+public class TMFFabric implements ModInitializer {
     @Override
     public void onInitialize() {
-        ExampleMod.init();
+        TMF.init();
     }
 }
