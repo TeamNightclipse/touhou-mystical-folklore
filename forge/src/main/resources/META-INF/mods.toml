@@ -4,7 +4,7 @@ loaderVersion = "[@FORGE_LOADER_MAJOR@,)"
 license = "MIT"
 
 [[mods]]
-modId = "touhou-mystical-folklore"
+modId = "touhoumysticalfolklore"
 version = "${version}"
 displayName = "touhou-mystical-folklore"
 authors = "Me!"
@@ -13,21 +13,21 @@ fumo
 '''
 #logoFile = ""
 
-[[dependencies.touhou-mystical-folklore]]
+[[dependencies.touhoumysticalfolklore]]
 modId = "forge"
 mandatory = true
 versionRange = "[@FORGE_LOADER_MAJOR@,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.touhou-mystical-folklore]]
+[[dependencies.touhoumysticalfolklore]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[@MINECRAFT@,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.touhou-mystical-folklore]]
+[[dependencies.touhoumysticalfolklore]]
 modId = "architectury"
 mandatory = true
 versionRange = "[@ARCHITECTURY_API@,)"

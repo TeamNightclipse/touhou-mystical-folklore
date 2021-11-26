@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "touhou-mystical-folklore",
+  "id": "touhoumysticalfolklore",
   "version": "${version}",
-  "name": "touhou-mystical-folklore",
+  "name": "touhoumysticalfolklore",
   "description": "fumo",
   "authors": [
     "Me!"
@@ -12,7 +12,7 @@
     "sources": "https://github.com/FabricMC/touhou-mystical-folklore"
   },
   "license": "MIT",
-  "icon": "assets/touhou-mystical-folklore/icon.png",
+  "icon": "assets/touhoumysticalfolklore/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
