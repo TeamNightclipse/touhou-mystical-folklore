@@ -24,8 +24,8 @@ public class TMF {
     );
 
     public static void init() {
-        TMFItems.ITEMS.register();
         TMFBlocks.BLOCKS.register();
+        TMFItems.ITEMS.register();
         TMFTiles.TILES.register();
         
         System.out.println(TMFExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
