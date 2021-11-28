@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.cinnamon.tmf.fabric.ExampleModFabric"
+      "com.cinnamon.tmf.fabric.TMFFabric"
     ]
   },
   "depends": {
