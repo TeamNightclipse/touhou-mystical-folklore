@@ -13,19 +13,17 @@ import net.minecraft.world.level.block.state.BlockState;
 public class OfferingTableTile extends BlockEntity //implements
 {
     public OfferingTableTile(BlockPos blockPos, BlockState blockState) {super(TMFTiles.OFFERING_TABLE.get(), blockPos, blockState);}
-    int ticks = 0;
-
-
+    //int ticks = 0;
     public static class OfferingTableTileTicker implements BlockEntityTicker<OfferingTableTile>
     {
         @Override
         public void tick(Level level, BlockPos blockPos, BlockState blockState, OfferingTableTile tableEntity)
         {
 
-            Player player = level.getNearestPlayer(TargetingConditions.forNonCombat(), blockPos.getX(), blockPos.getY(), blockPos.getZ());
+            /*Player player = level.getNearestPlayer(TargetingConditions.forNonCombat(), blockPos.getX(), blockPos.getY(), blockPos.getZ());
             if(tableEntity.ticks == 0) player.displayClientMessage(new TextComponent("AHHHHHHHHHH"), false);
             tableEntity.ticks++;
-            if(tableEntity.ticks > 12) tableEntity.ticks = 0;
+            if(tableEntity.ticks > 12) tableEntity.ticks = 0;*/
         }
     }
 }
