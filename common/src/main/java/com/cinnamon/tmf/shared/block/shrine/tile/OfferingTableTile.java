@@ -19,7 +19,6 @@ public class OfferingTableTile extends BlockEntity //implements
         @Override
         public void tick(Level level, BlockPos blockPos, BlockState blockState, OfferingTableTile tableEntity)
         {
-
             /*Player player = level.getNearestPlayer(TargetingConditions.forNonCombat(), blockPos.getX(), blockPos.getY(), blockPos.getZ());
             if(tableEntity.ticks == 0) player.displayClientMessage(new TextComponent("AHHHHHHHHHH"), false);
             tableEntity.ticks++;
