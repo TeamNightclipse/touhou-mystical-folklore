@@ -1,6 +1,7 @@
 package com.cinnamon.tmf;
 
 import com.cinnamon.tmf.shared.block.TMFBlocks;
+import com.cinnamon.tmf.shared.block.TMFTiles;
 import com.cinnamon.tmf.shared.item.TMFItems;
 import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
@@ -25,6 +26,7 @@ public class TMF {
     public static void init() {
         TMFItems.ITEMS.register();
         TMFBlocks.BLOCKS.register();
+        TMFTiles.TILES.register();
         
         System.out.println(TMFExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }
