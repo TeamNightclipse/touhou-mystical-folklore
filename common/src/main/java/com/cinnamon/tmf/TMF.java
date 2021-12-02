@@ -1,19 +1,15 @@
 package com.cinnamon.tmf;
 
+import com.cinnamon.tmf.client.render.block.shrine.OfferingTableRender;
 import com.cinnamon.tmf.shared.block.TMFBlocks;
 import com.cinnamon.tmf.shared.block.TMFTiles;
 import com.cinnamon.tmf.shared.item.TMFItems;
+import dev.architectury.event.events.client.ClientLifecycleEvent;
 import dev.architectury.registry.CreativeTabRegistry;
-import dev.architectury.registry.registries.DeferredRegister;
-import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.core.Registry;
+import dev.architectury.registry.client.rendering.BlockEntityRendererRegistry;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-
-import java.util.function.Supplier;
 
 public class TMF {
 
@@ -27,7 +23,8 @@ public class TMF {
         TMFBlocks.BLOCKS.register();
         TMFItems.ITEMS.register();
         TMFTiles.TILES.register();
-        
-        System.out.println(TMFExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
+        ClientLifecycleEvent.CLIENT_SETUP.register(instance -> {
+            BlockEntityRendererRegistry.register(TMFTiles.OFFERING_TABLE.get(), OfferingTableRender::new);
+        });
     }
 }

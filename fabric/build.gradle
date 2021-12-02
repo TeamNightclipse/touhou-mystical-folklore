@@ -23,6 +23,15 @@ dependencies {
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
+
+    // Compatibility
+    modApi "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:${rootProject.cardinal_components}"
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-entity:${rootProject.cardinal_components}"
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-block:${rootProject.cardinal_components}"
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-chunk:${rootProject.cardinal_components}"
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-item:${rootProject.cardinal_components}"
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-world:${rootProject.cardinal_components}"
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-level:${rootProject.cardinal_components}"
 }
 
 processResources {

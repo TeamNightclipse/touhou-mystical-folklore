@@ -1,13 +1,13 @@
 package com.cinnamon.tmf.fabric;
 
-import com.cinnamon.tmf.TMFExpectPlatform;
+import com.cinnamon.tmf.TMFPlatform;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.nio.file.Path;
 
-public class TMFExpectPlatformImpl {
+public class TMFPlatformImpl {
     /**
-     * This is our actual method to {@link TMFExpectPlatform#getConfigDirectory()}.
+     * This is our actual method to {@link TMFPlatform#getConfigDirectory()}.
      */
     public static Path getConfigDirectory() {
         return FabricLoader.getInstance().getConfigDir();

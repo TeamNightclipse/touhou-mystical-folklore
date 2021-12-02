@@ -17,6 +17,12 @@
   "entrypoints": {
     "main": [
       "com.cinnamon.tmf.fabric.TMFFabric"
+    ],
+    "client": [
+      "com.cinnamon.tmf.fabric.TMFFabricClient"
+    ],
+    "server": [
+      "com.cinnamon.tmf.fabric.TMFFabricServer"
     ]
   },
   "depends": {

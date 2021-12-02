@@ -1,7 +1,7 @@
 package com.cinnamon.tmf.forge;
 
-import dev.architectury.platform.forge.EventBuses;
 import com.cinnamon.tmf.TMF;
+import dev.architectury.platform.forge.EventBuses;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 

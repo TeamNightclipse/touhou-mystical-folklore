@@ -1,5 +1,19 @@
 {
   "variants": {
-    "": { "model": "touhoumysticalfolklore:block/offering_table" }
+    "facing=east": {
+      "model": "touhoumysticalfolklore:block/offering_table",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "touhoumysticalfolklore:block/offering_table"
+    },
+    "facing=south": {
+      "model": "touhoumysticalfolklore:block/offering_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "touhoumysticalfolklore:block/offering_table",
+      "y": 270
+    }
   }
 }

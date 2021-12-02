@@ -15,4 +15,7 @@ public class TMFItems {
 
     public static final RegistrySupplier<Item> OFFERING_TABLE_ITEM = ITEMS.register(Names.OFFERING_TABLE,
             () -> new BlockItem(TMFBlocks.OFFERING_TABLE_BLOCK.get(), new Item.Properties().tab(TMF.TAB)));
+
+    public static final RegistrySupplier<Item> DECORATION_ITEM = ITEMS.register(Names.DECORATION,
+            () -> new BlockItem(TMFBlocks.DECORATION_BLOCK.get(), new Item.Properties().tab(TMF.TAB)));
 }
