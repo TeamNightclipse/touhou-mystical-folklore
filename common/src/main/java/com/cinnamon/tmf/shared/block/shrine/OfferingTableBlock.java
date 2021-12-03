@@ -102,16 +102,14 @@ public class OfferingTableBlock extends BaseEntityBlock {
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
         if (blockState.getValue(HAS_ITEM)) {
             if (!level.isClientSide) {
-                this.popItem(blockState, level, blockPos);
-                level.setBlock(blockPos, blockState.setValue(HAS_ITEM, false), 3);
+                OfferingTableBlock.popItem(blockState, level, blockPos);
             }
             return InteractionResult.sidedSuccess(level.isClientSide);
         } else {
             ItemStack itemStack = player.getItemInHand(interactionHand);
             if (!itemStack.isEmpty() && !itemStack.is(TMFItems.OFFERING_TABLE_ITEM.get())) {
                 if (!level.isClientSide) {
-                    this.putItem(blockState, level, blockPos, itemStack);
-                    level.setBlock(blockPos, blockState.setValue(HAS_ITEM, true), 3);
+                    OfferingTableBlock.putItem(blockState, level, blockPos, itemStack);
                 }
                 return InteractionResult.CONSUME;
             } else {
@@ -120,14 +118,15 @@ public class OfferingTableBlock extends BaseEntityBlock {
         }
     }
 
-    private void putItem(BlockState blockState, Level level, BlockPos blockPos, ItemStack stack) {
+    public static void putItem(BlockState blockState, Level level, BlockPos blockPos, ItemStack stack) {
         BlockEntity blockEntity = level.getBlockEntity(blockPos);
         if (blockEntity instanceof OfferingTableBlockEntity offeringTableBlockEntity) {
             offeringTableBlockEntity.setItem(stack);
+            OfferingTableBlock.unsetState(level, blockPos, blockState);
         }
     }
 
-    private void popItem(BlockState blockState, Level level, BlockPos blockPos) {
+    public static void popItem(BlockState blockState, Level level, BlockPos blockPos) {
         BlockEntity blockEntity = level.getBlockEntity(blockPos);
         if (blockEntity instanceof OfferingTableBlockEntity offeringTableBlockEntity) {
             Direction direction = blockState.getValue(FACING);
@@ -138,7 +137,22 @@ public class OfferingTableBlock extends BaseEntityBlock {
             itemEntity.setDefaultPickUpDelay();
             level.addFreshEntity(itemEntity);
             offeringTableBlockEntity.clearContent();
+            OfferingTableBlock.resetState(level, blockPos, blockState);
         }
+    }
+
+    public static void resetState(Level level, BlockPos blockPos, BlockState blockState) {
+        level.setBlock(blockPos, blockState.setValue(HAS_ITEM, false), 3);
+        OfferingTableBlock.updateBelow(level, blockPos, blockState);
+    }
+
+    public static void unsetState(Level level, BlockPos blockPos, BlockState blockState) {
+        level.setBlock(blockPos, blockState.setValue(HAS_ITEM, true), 3);
+        OfferingTableBlock.updateBelow(level, blockPos, blockState);
+    }
+
+    private static void updateBelow(Level level, BlockPos blockPos, BlockState blockState) {
+        level.updateNeighborsAt(blockPos.below(), blockState.getBlock());
     }
 
     @Nullable
