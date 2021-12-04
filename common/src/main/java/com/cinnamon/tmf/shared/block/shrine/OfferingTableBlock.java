@@ -20,7 +20,6 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.LecternBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -131,9 +130,9 @@ public class OfferingTableBlock extends BaseEntityBlock {
         if (blockEntity instanceof OfferingTableBlockEntity offeringTableBlockEntity) {
             Direction direction = blockState.getValue(FACING);
             ItemStack itemStack = offeringTableBlockEntity.getItem().copy();
-            float f = 0.25F * (float)direction.getStepX();
-            float g = 0.25F * (float)direction.getStepZ();
-            ItemEntity itemEntity = new ItemEntity(level, (double)blockPos.getX() + 0.5D + (double)f, blockPos.getY() + 1, (double)blockPos.getZ() + 0.5D + (double)g, itemStack);
+            float f = 0.25F * (float) direction.getStepX();
+            float g = 0.25F * (float) direction.getStepZ();
+            ItemEntity itemEntity = new ItemEntity(level, (double) blockPos.getX() + 0.5D + (double) f, blockPos.getY() + 1, (double) blockPos.getZ() + 0.5D + (double) g, itemStack);
             itemEntity.setDefaultPickUpDelay();
             level.addFreshEntity(itemEntity);
             offeringTableBlockEntity.clearContent();
